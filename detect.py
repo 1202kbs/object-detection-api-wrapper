@@ -15,6 +15,7 @@ N_THREADS = 64
 BATCH_SIZE = 1
 VISUALIZE = False
 JSON_OUTPUT_FILE = 'output.json'
+EXTENSION = '.csv'
 
 
 def str2bool(v):
@@ -32,7 +33,7 @@ def build_parser():
     parser.add_argument('--url-file', dest='url_file', help='name of the url file without extension name',
                         metavar='URL_FILE', required=True)
     parser.add_argument('--extension', dest='extension', help='url file file type, .json or .csv',
-                        metavar='EXTENSION', required=True)
+                        metavar='EXTENSION', required=True, default=EXTENSION)
     parser.add_argument('--downloaded', type=str2bool, dest='downloaded', help='indicate whether you downloaded the model file',
                         metavar='DOWNLOADED', required=True)
     parser.add_argument('--json-output-file', dest='json_output_file', help='name of the json output file',
