@@ -111,7 +111,7 @@ def main():
                 while not coord.should_stop():
                     image = sess.run(inputs)  # Tensor of dimension (1, None, None, 3)
 
-                    print('Converting Image', ix)
+                    print('Processing Image', ix)
 
                     image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
                     boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
@@ -126,7 +126,7 @@ def main():
 
                     conversion_time.append(time.time() - t2)
 
-                    print('Image', ix, 'Conversion Time:', conversion_time[ix - 1], 'sec')
+                    print('Image', ix, 'Processing Time:', conversion_time[ix - 1], 'sec')
 
                     res[id_li[ix - 1]] = {'boxes': np.squeeze(boxes),
                                           'scores': np.squeeze(scores),
@@ -136,7 +136,7 @@ def main():
                     ix += 1
 
             except tf.errors.OutOfRangeError:
-                print('Total Image Conversion Time:', sum(conversion_time), 'sec')
+                print('Total Image Processing Time:', sum(conversion_time), 'sec')
                 print('Total Time Consumed:', time.time() - t, 'sec')
 
             finally:
