@@ -16,7 +16,7 @@ Simple wrapper functions for Google Object Detection API.
 3. Run detect.py in command line with <code>--downloaded False</code>
 
 ## Running in Command Line
-<pre><code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --extension <EXTENSION> --downloaded <DOWNLOADED></code></pre>
+<pre><code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --extension <EXTENSION> --downloaded <True/False></code></pre>
 
 *Example:* 
 
