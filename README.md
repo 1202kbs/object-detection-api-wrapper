@@ -11,6 +11,7 @@ Simple wrapper functions for Google Object Detection API.
 <pre><code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --downloaded <True/False></code></pre>
 
 *Example:* 
+
 <code>python detect.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --downloaded True</code>
 
 #### Required Arguments
