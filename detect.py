@@ -16,6 +16,7 @@ BATCH_SIZE = 1
 VISUALIZE = False
 JSON_OUTPUT_FILE = 'output.json'
 EXTENSION = '.csv'
+DOWNLOADED = False
 
 
 def str2bool(v):
@@ -35,7 +36,7 @@ def build_parser():
     parser.add_argument('--extension', dest='extension', help='url file file type, .json or .csv',
                         metavar='EXTENSION', required=True, default=EXTENSION)
     parser.add_argument('--downloaded', type=str2bool, dest='downloaded', help='indicate whether you downloaded the model file',
-                        metavar='DOWNLOADED', required=True)
+                        metavar='DOWNLOADED', required=True, default=DOWNLOADED)
     parser.add_argument('--json-output-file', dest='json_output_file', help='name of the json output file',
                         metavar='JSON_OUTPUT_FILE', default=JSON_OUTPUT_FILE)
     parser.add_argument('--n-threads', type=int, dest='n_threads', help='number of threads',

@@ -26,7 +26,7 @@ Simple wrapper functions for Google Object Detection API.
 * <code>--model-name</code> : Name of the model to use. *No Default*
 * <code>--url-file</code> : Name of the url file without .json extension. *No Default*
 * <code>--extension</code> : Url file file type, .json or .csv. *Default: .csv*
-* <code>--downloaded</code> : Indicate whether you have already downloaded model .tar file or not. *No Default*
+* <code>--downloaded</code> : Indicate whether you have already downloaded model .tar file or not. Wrapper will automatically create 'detection_model_zoo' directory and download model file if set to False. *Default: False*
 
 #### Optional Arguments
 * <code>--json-output-file</code> : Name of the json output file to dump results. *Default: output.json*
@@ -49,6 +49,5 @@ Run <code>python detect.py --help</code> to see a list of all options.
 * Tensorflow-gpu >= 1.1
 * Scikit-image
 * Matplotlib
-* Pillow
 * Pandas
 * Numpy
