@@ -8,9 +8,10 @@ Simple wrapper functions for Google Object Detection API.
 4. Check the [Jupyter notebook](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Google%20Object%20Detection%20API%20Wrapper%20Tutorial.ipynb) for further instructions and examples
 
 ## Running in Command Line
-<code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --downloaded <True/False></code>
+<pre><code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --downloaded <True/False></code></pre>
 
-*Example:* <code>python detect.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --downloaded True</code>
+*Example:* 
+<code>python detect.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --downloaded True</code>
 
 #### Required Arguments
 * <code>--model-name</code> : Name of the model to use. *No Default*
