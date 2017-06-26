@@ -17,19 +17,29 @@ VISUALIZE = False
 JSON_OUTPUT_FILE = 'output.json'
 
 
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected')
+
 def build_parser():
     parser = ArgumentParser()
-    parser.add_argument('--model-name', dest='model_name', help='model name without .tar extension',
+    parser.add_argument('--model-name', dest='model_name', help='model name',
                         metavar='MODEL_NAME', required=True)
     parser.add_argument('--url-file', dest='url_file', help='name of the url file without extension name',
                         metavar='URL_FILE', required=True)
-    parser.add_argument('--downloaded', dest='downloaded', help='indicate whether you downloaded the model file',
+    parser.add_argument('--extension', dest='extension', help='url file file type, .json or .csv',
+                        metavar='EXTENSION', required=True)
+    parser.add_argument('--downloaded', type=str2bool, dest='downloaded', help='indicate whether you downloaded the model file',
                         metavar='DOWNLOADED', required=True)
     parser.add_argument('--json-output-file', dest='json_output_file', help='name of the json output file',
                         metavar='JSON_OUTPUT_FILE', default=JSON_OUTPUT_FILE)
-    parser.add_argument('--n-threads', dest='n_threads', help='number of threads',
+    parser.add_argument('--n-threads', type=int, dest='n_threads', help='number of threads',
                         metavar='N_THREADS', default=N_THREADS)
-    parser.add_argument('--visualize', dest='visualize', help='visualize',
+    parser.add_argument('--visualize', type=str2bool, dest='visualize', help='visualize',
                         metavar='VISUALIZE', default=VISUALIZE)
     parser.add_argument('--labels', dest='path_to_labels', help='path to labels',
                         metavar='PATH_TO_LABELS', default=PATH_TO_LABELS)
@@ -42,12 +52,13 @@ def main():
     options = parser.parse_args()
 
     model_name = options.model_name
-    model_file = 'detection_model_zoo/' + model_name + '.tar.gz'
+    model_file = model_name + '.tar.gz'
     path_to_ckpt = model_name + '/frozen_inference_graph.pb'
 
     url_file = options.url_file
     json_url_file = url_file + '.json'
     csv_url_file = url_file + '.csv'
+    extension = options.extension
 
     downloaded = options.downloaded
 
@@ -57,7 +68,9 @@ def main():
     path_to_labels = options.path_to_labels
 
     helpers.download_extract_model(model_file=model_file, downloaded=downloaded)
-    helpers.json2csv(json_name=json_url_file, csv_name=csv_url_file)
+    
+    if extension == '.json':    
+        helpers.json2csv(json_name=json_url_file, csv_name=csv_url_file)
 
     li = pd.read_csv(csv_url_file)
     url_li = li['img_url'].tolist()

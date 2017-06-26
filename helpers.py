@@ -49,9 +49,9 @@ def download_extract_model(model_file, downloaded=True, download_base=DOWNLOAD_B
 
     if not downloaded:
         opener = urllib.request.URLopener()
-        opener.retrieve(download_base + model_file, model_file)
+        opener.retrieve(download_base + model_file, 'detection_model_zoo/' + model_file)
 
-    tar_file = tarfile.open(model_file)
+    tar_file = tarfile.open('detection_model_zoo/' + model_file)
     for file in tar_file.getmembers():
         file_name = os.path.basename(file.name)
         if 'frozen_inference_graph.pb' in file_name:
