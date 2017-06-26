@@ -8,26 +8,27 @@ Simple wrapper functions for Google Object Detection API.
 4. Check the [Jupyter notebook](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Google%20Object%20Detection%20API%20Wrapper%20Tutorial.ipynb) for further instructions and examples
 
 ## Running in Command Line
-<code>python detect.py --model-name MODEL_NAME --url-file URL_FILE --downloaded True/False</code>
+<code>python detect.py --model-name <MODEL_NAME> --url-file <URL_FILE> --downloaded <True/False></code>
 
-#### Additional Options
+#### Additional Arguments
 * <code>--json-output-file</code> : Name of the json output file to dump results
 * <code>--n-threads</code> : Number of threads to use
 * <code>--visualize</code> : Indicate whether you want to visualize the results
 * <code>--labels</code> : Path to the label file
 
-Above options all have default parameters, so it is unnecessary to change them.
+Additional arguments all have default parameters, so it is unnecessary to change them.
 
 Run <code>python detect.py --help</code> to see a list of all options.
 
 ## Etc.
 * Check the function docstring in [helpers.py](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/helpers.py) for more info
+* .proto files have already been compiled with Protobuf Compiler.
 
 ## Helpful Links
 * Original link for [Google Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/object_detection)
 * Protobuf compiler [download link](https://github.com/google/protobuf/releases/tag/v3.3.0)
 
-## Dependencies
+## Prerequisites
 * Python 3.5
 * Tensorflow-gpu >= 1.1
 * Scikit-image
