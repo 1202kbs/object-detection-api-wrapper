@@ -1,0 +1,6 @@
+numpy
+tensorflow-gpu >= 1.1 # installs tensorflow with GPU support, but should still work even without GPU
+matplotlib
+Pillow # provides PIL
+pandas
+Scikit-image # provides skimage
