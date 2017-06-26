@@ -23,8 +23,6 @@ Simple wrapper functions for Google Object Detection API.
 * <code>--visualize</code> : Indicate whether you want to visualize the results. *Default: False*
 * <code>--labels</code> : Path to the label file. *Default: object_detection/data/mscoco_label_map.pbtxt*
 
-Optional arguments all have default parameters, and changing them is not recommended.
-
 Run <code>python detect.py --help</code> to see a list of all options.
 
 ## Etc.
