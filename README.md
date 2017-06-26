@@ -4,16 +4,18 @@ Simple wrapper functions for Google Object Detection API.
 ## Instructions
 
 #### Method 1
-1. Create a 'detection_model_zoo' directory
-2. Download model from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/detection_model_zoo.md)
-3. Copy the downloaded model into 'detection_model_zoo' directory
-4. Create a file containing the urls of images to be analyzed. This wrapper supports both [.csv](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.csv) and [.json](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.json) extensions. (Click link for example format)
-5. Check the [Jupyter notebook](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Google%20Object%20Detection%20API%20Wrapper%20Tutorial.ipynb) for further instructions and examples
+1. Download the repository
+2. Create a 'detection_model_zoo' directory in the extracted repository file
+3. Download model from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/detection_model_zoo.md)
+4. Copy the downloaded model into 'detection_model_zoo' directory
+5. Create a file containing the urls of images to be analyzed. This wrapper supports both [.csv](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.csv) and [.json](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.json) extensions. (Click link for example format)
+6. Check the [Jupyter notebook](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Google%20Object%20Detection%20API%20Wrapper%20Tutorial.ipynb) for further instructions and examples
 
 #### Method 2
-1. Select the model to use from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/detection_model_zoo.md)
-2. Create a file containing the urls of images to be analyzed. This wrapper supports both [.csv](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.csv) and [.json](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.json) extensions. (Click link for example format)
-3. Run detect.py in command line with <code>--downloaded False</code>
+1. Download the repository
+2. Select the model to use from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/detection_model_zoo.md)
+3. Create a file containing the urls of images to be analyzed. This wrapper supports both [.csv](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.csv) and [.json](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.json) extensions. (Click link for example format)
+4. Run detect.py in command line with <code>--downloaded False</code>. Check below section for more detail
 
 ## Running in Command Line
 <pre><code>python detect.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED</code></pre>
