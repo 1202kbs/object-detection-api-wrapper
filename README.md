@@ -42,7 +42,8 @@ Successful execution will create a [.json file](https://github.com/1202kbs/objec
 
 ## Etc.
 * Check the function docstring in [helpers.py](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/helpers.py) for more info
-* .proto files have already been compiled with Protobuf compiler(Protoc).
+* .proto files have already been compiled with Protobuf compiler (Protoc)
+* This code has been tested with Tensorflow 1.1 on Windows 10
 
 ## Helpful Links
 * Original link for [Google Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/object_detection)
