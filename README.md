@@ -36,6 +36,8 @@ Simple wrapper functions for Google Object Detection API.
 
 Run <code>python detect.py --help</code> to see a list of all options.
 
+Successful execution will create a .json file which contains the results of object detection. Contents of the .json file can be read into a dictionary of numpy arrarys with json2dict function in helpers.py. For additional functions for visualization or modification of the results of object detection, look into helpers.py.
+
 ## Etc.
 * Check the function docstring in [helpers.py](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/helpers.py) for more info
 * .proto files have already been compiled with Protobuf compiler(Protoc).
