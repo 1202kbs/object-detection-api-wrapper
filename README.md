@@ -28,6 +28,7 @@ Run <code>python detect.py --help</code> to see a list of all options.
 * Protobuf compiler [download link](https://github.com/google/protobuf/releases/tag/v3.3.0)
 
 ## Dependencies
+* Python 3.5
 * Tensorflow-gpu >= 1.1
 * Scikit-image
 * Matplotlib
