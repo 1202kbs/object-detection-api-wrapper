@@ -18,11 +18,11 @@ Simple wrapper functions for Google Object Detection API.
 4. Run detect.py in command line with <code>--downloaded False</code>. Check below section for more detail
 
 ## Running in Command Line
-<pre><code>python detect.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED</code></pre>
+<pre><code>python detect_cm.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED</code></pre>
 
 *Example:* 
 
-<code>python detect.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True</code>
+<code>python detect_cm.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True</code>
 
 #### Required Arguments
 * <code>--model-name</code> : Name of the model to use. *No Default*
@@ -36,9 +36,30 @@ Simple wrapper functions for Google Object Detection API.
 * <code>--visualize</code> : Indicate whether you want to visualize the results. *Default: False*
 * <code>--labels</code> : Path to the label file. *Default: object_detection/data/mscoco_label_map.pbtxt*
 
-Run <code>python detect.py --help</code> to see a list of all options.
+Run <code>python detect_cm.py --help</code> to see a list of all options.
 
 Successful execution will create a [.json file](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/output.json) which contains the results of object detection. Contents of the .json file can be read into a dictionary of numpy arrarys with json2dict function in helpers.py. For additional functions for visualization or modification of the results of object detection, look into helpers.py.
+
+## Running within IDE
+1. Import detect.py
+2. Run <code>detect.object_detect(...)</code>
+3. The object_detect() function takes the same arguments as command line execution. Look into detect.py for more details
+
+If the execution is successful, the function will return a dictionary of numpy arrays containing the object detection results and create a [.json file](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/output.json) which contains the results of object detection. Contents of the .json file can be read into a dictionary of numpy arrarys with json2dict function in helpers.py. For additional functions for visualization or modification of the results of object detection, look into helpers.py.
+
+*Example:*
+
+<pre><code>
+import detect
+
+model_name = 'faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017'
+url_file = 'Imagenet_sample_images'
+extension = '.csv'
+downloaded = True
+visualize = True
+
+res = detect.object_detect(model_name=model_name, url_file=url_file, extension=extension, downloaded=downloaded, visualize=visualize)
+</code></pre>
 
 ## Etc.
 * Check the function docstring in [helpers.py](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/helpers.py) for more info

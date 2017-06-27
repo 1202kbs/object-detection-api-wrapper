@@ -9,22 +9,65 @@ import numpy as np
 import helpers
 
 
+# MODEL_NAME = 'faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017'
+PATH_TO_LABELS = os.path.join('object_detection/data', 'mscoco_label_map.pbtxt')
+N_THREADS = 64
+BATCH_SIZE = 1
+VISUALIZE = False
+JSON_OUTPUT_FILE = 'output.json'
 EXTENSION = '.csv'
 DOWNLOADED = False
-JSON_OUTPUT_FILE = 'output.json'
-N_THREADS = 64
-VISUALIZE = False
-PATH_TO_LABELS = os.path.join('object_detection/data', 'mscoco_label_map.pbtxt')
-BATCH_SIZE = 1
 
 
-def object_detect(model_name, url_file, extension=EXTENSION, downloaded=DOWNLOADED, json_output_file=JSON_OUTPUT_FILE, n_threads=N_THREADS, visualize=VISUALIZE, path_to_labels=PATH_TO_LABELS):
-   	
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected')
+
+def build_parser():
+    parser = ArgumentParser()
+    parser.add_argument('--model-name', dest='model_name', help='model name',
+                        metavar='MODEL_NAME', required=True)
+    parser.add_argument('--url-file', dest='url_file', help='name of the url file without extension name',
+                        metavar='URL_FILE', required=True)
+    parser.add_argument('--extension', dest='extension', help='url file file type, .json or .csv',
+                        metavar='EXTENSION', required=True, default=EXTENSION)
+    parser.add_argument('--downloaded', type=str2bool, dest='downloaded', help='indicate whether you downloaded the model file',
+                        metavar='DOWNLOADED', required=True, default=DOWNLOADED)
+    parser.add_argument('--json-output-file', dest='json_output_file', help='name of the json output file',
+                        metavar='JSON_OUTPUT_FILE', default=JSON_OUTPUT_FILE)
+    parser.add_argument('--n-threads', type=int, dest='n_threads', help='number of threads',
+                        metavar='N_THREADS', default=N_THREADS)
+    parser.add_argument('--visualize', type=str2bool, dest='visualize', help='visualize',
+                        metavar='VISUALIZE', default=VISUALIZE)
+    parser.add_argument('--labels', dest='path_to_labels', help='path to labels',
+                        metavar='PATH_TO_LABELS', default=PATH_TO_LABELS)
+
+    return parser
+
+
+def main():
+    parser = build_parser()
+    options = parser.parse_args()
+
+    model_name = options.model_name
     model_file = model_name + '.tar.gz'
     path_to_ckpt = model_name + '/frozen_inference_graph.pb'
-    
+
+    url_file = options.url_file
     json_url_file = url_file + '.json'
     csv_url_file = url_file + '.csv'
+    extension = options.extension
+
+    downloaded = options.downloaded
+
+    json_output_file = options.json_output_file
+    n_threads = options.n_threads
+    visualize = options.visualize
+    path_to_labels = options.path_to_labels
 
     helpers.download_extract_model(model_file=model_file, downloaded=downloaded)
     
@@ -107,4 +150,6 @@ def object_detect(model_name, url_file, extension=EXTENSION, downloaded=DOWNLOAD
 
             coord.join(enqueue_threads)
 
-    return res
+
+if __name__ == '__main__':
+    main()
