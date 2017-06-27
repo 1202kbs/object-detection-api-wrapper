@@ -15,7 +15,7 @@ Simple wrapper functions for Google Object Detection API.
 1. Download the repository
 2. Select the model to use from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/detection_model_zoo.md)
 3. Create a file containing the urls of images to be analyzed. This wrapper supports both [.csv](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.csv) and [.json](https://github.com/1202kbs/object-detection-api-wrapper/blob/master/Imagenet_sample_images.json) extensions. (Click link for example format)
-4. Run detect.py in command line with <code>--downloaded False</code>. Check below section for more detail
+4. Run detect_cm.py in command line with <code>--downloaded False</code>. Check below section for more detail
 
 ## Running in Command Line
 <pre><code>python detect_cm.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED</code></pre>
