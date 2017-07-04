@@ -18,11 +18,11 @@ Simple wrapper functions for Google Object Detection API.
 4. Run detect_cm.py in command line with <code>--downloaded False</code>. Check below section for more detail
 
 ## Running in Command Line
-<pre><code>python detect_cm.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED</code></pre>
+<pre><code>python detect_cm.py --model-name MODEL_NAME --url-file URL_FILE --extension EXTENSION --downloaded DOWNLOADED --do-rescale DO_RESCALE</code></pre>
 
 *Example:* 
 
-<code>python detect_cm.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True --do-rescale False</code>
+<pre><code>python detect_cm.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True --do-rescale False</code></pre>
 
 #### Required Arguments
 * <code>--model-name</code> : Name of the model to use. *No Default*
