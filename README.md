@@ -81,3 +81,6 @@ res = detect.object_detect(model_name=model_name, url_file=url_file, extension=e
 * Matplotlib
 * Pandas
 * Numpy
+
+## Updates
+* 2017/07/04 : Added image rescale function. For some reason, rescaling drops the recognition accuracy by a significant amount, so using this is not recommended until resolved.
