@@ -16,9 +16,10 @@ N_THREADS = 64
 VISUALIZE = False
 PATH_TO_LABELS = os.path.join('object_detection/data', 'mscoco_label_map.pbtxt')
 BATCH_SIZE = 1
+DO_RESCALE = True
+WIDTH_THRESHOLD = 500
 
-
-def object_detect(model_name, url_file, extension=EXTENSION, downloaded=DOWNLOADED, json_output_file=JSON_OUTPUT_FILE, n_threads=N_THREADS, visualize=VISUALIZE, path_to_labels=PATH_TO_LABELS):
+def object_detect(model_name, url_file, extension=EXTENSION, downloaded=DOWNLOADED, do_rescale=DO_RESCALE, width_threshold=WIDTH_THRESHOLD, json_output_file=JSON_OUTPUT_FILE, n_threads=N_THREADS, visualize=VISUALIZE, path_to_labels=PATH_TO_LABELS):
    	
     model_file = model_name + '.tar.gz'
     path_to_ckpt = model_name + '/frozen_inference_graph.pb'
@@ -44,7 +45,7 @@ def object_detect(model_name, url_file, extension=EXTENSION, downloaded=DOWNLOAD
             tf.import_graph_def(od_graph_def, name='')
 
     with detection_graph.as_default():
-        im = helpers.url_image_reader(url_li)
+        im = helpers.url_image_reader(url_li, do_rescale=do_rescale, width_threshold=width_threshold)
 
         queue = tf.PaddingFIFOQueue(capacity=500, dtypes=tf.uint8, shapes=[(None, None, None)])
         enq_op = queue.enqueue(im)

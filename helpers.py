@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 import pandas as pd
 import numpy as np
+from skimage.transform import rescale
 from skimage import io
 
 from object_detection.utils import visualization_utils as vis_util
@@ -47,15 +48,22 @@ def download_extract_model(model_file, downloaded=True, download_base=DOWNLOAD_B
     :return: None
     """
 
+    if not os.path.exists('detection_model_zoo'):
+    	os.mkdir('detection_model_zoo')
+
     if not downloaded:
+        print('Downloading Model: ' + model_file)
         opener = urllib.request.URLopener()
         opener.retrieve(download_base + model_file, 'detection_model_zoo/' + model_file)
-
+        print('Download Complete')
+    
+    print('Extracting Model: ' + model_file)
     tar_file = tarfile.open('detection_model_zoo/' + model_file)
     for file in tar_file.getmembers():
         file_name = os.path.basename(file.name)
         if 'frozen_inference_graph.pb' in file_name:
             tar_file.extract(file, os.getcwd())
+    print('Extraction Complete')
 
 
 def json2csv(json_name, csv_name):
@@ -73,17 +81,30 @@ def json2csv(json_name, csv_name):
     data.to_csv(csv_name, header=True)
 
 
-def url_image_reader(urls):
+def url_image_reader(urls, do_rescale=False, width_threshold=500):
     """
     Reads the list of image urls and converts them to tensors.
 
     :param urls: (List) List of image urls
+    :param do_rescale: (Boolean) Indicate whether you wish to rescale the image or not
+    :param width_threshold: (Integer) If do_rescale=True, all the images with width size over width_threshold will be rescaled to fit width_threshold
     :return: (Tensor) Tensor of images specified by the list of url
     """
 
-    def load_nth_url(n):
-        return io.imread(urls[n])
+    def rescale_img(img):
+    	if np.shape(img)[1] <= 500:
+    		return img
+    	else:
+    		scaling_factor = width_threshold / np.shape(img)[1]
+    		return rescale(img, scaling_factor)
 
+    def load_nth_url(n):
+    	if do_rescale:
+    		return rescale_img(io.imread(urls[n])).astype(np.uint8)
+    	else:
+    		return io.imread(urls[n])
+    
+    print('Reading URLs...')
     url_iter = tf.Variable(0, name='url_iter').count_up_to(len(urls))
     return tf.py_func(load_nth_url, [url_iter], stateful=True, Tout=[tf.uint8])
 

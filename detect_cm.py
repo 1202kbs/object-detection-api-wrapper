@@ -17,7 +17,8 @@ VISUALIZE = False
 JSON_OUTPUT_FILE = 'output.json'
 EXTENSION = '.csv'
 DOWNLOADED = False
-
+DO_RESCALE = False
+WIDTH_THRESHOLD = 500
 
 def str2bool(v):
     if v.lower() in ('yes', 'true', 't', 'y', '1'):
@@ -37,6 +38,10 @@ def build_parser():
                         metavar='EXTENSION', required=True, default=EXTENSION)
     parser.add_argument('--downloaded', type=str2bool, dest='downloaded', help='indicate whether you downloaded the model file',
                         metavar='DOWNLOADED', required=True, default=DOWNLOADED)
+    parser.add_argument('--do-rescale', type=str2bool, dest='do_rescale', help='indicate whether you want to rescale or not',
+                        metavar='DO_RESCALE', required=True, default=DO_RESCALE)
+    parser.add_argument('--width-threshold', type=int, dest='width_threshold', help='size of the image width threshold',
+                        metavar='WIDTH_THRESHOLD', default=WIDTH_THRESHOLD)
     parser.add_argument('--json-output-file', dest='json_output_file', help='name of the json output file',
                         metavar='JSON_OUTPUT_FILE', default=JSON_OUTPUT_FILE)
     parser.add_argument('--n-threads', type=int, dest='n_threads', help='number of threads',
@@ -64,6 +69,9 @@ def main():
 
     downloaded = options.downloaded
 
+    do_rescale = options.do_rescale
+    width_threshold = options.width_threshold
+
     json_output_file = options.json_output_file
     n_threads = options.n_threads
     visualize = options.visualize
@@ -87,7 +95,7 @@ def main():
             tf.import_graph_def(od_graph_def, name='')
 
     with detection_graph.as_default():
-        im = helpers.url_image_reader(url_li)
+        im = helpers.url_image_reader(url_li, do_rescale=do_rescale, width_threshold=width_threshold)
 
         queue = tf.PaddingFIFOQueue(capacity=500, dtypes=tf.uint8, shapes=[(None, None, None)])
         enq_op = queue.enqueue(im)

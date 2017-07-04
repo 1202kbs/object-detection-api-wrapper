@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0200b8de-cc6d-40b4-bdc2-cbd5a3c608ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-    </list>
+    <list default="true" id="0200b8de-cc6d-40b4-bdc2-cbd5a3c608ff" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +15,37 @@
       <file leaf-file-name="helpers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
+            <state relative-caret-position="1121">
               <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+                <marker date="1498472483300" expanded="true" signature="1192:2219" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="1832:1929" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="2070:2219" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="2256:2687" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="2261:2528" ph="&quot;&quot;&quot;Converts json file of urls into a csv file with headers 'img_id' and 'url', respectively....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="2717:3119" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="2722:2908" ph="&quot;&quot;&quot;Reads the list of image urls and converts them to tensors....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="2934:2968" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="3161:3953" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="3166:3637" ph="&quot;&quot;&quot;Removes any object detection results whose confidence (score) is below certain point specified by the user....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="3686:3937" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="3749:3936" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="3991:4845" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="3996:4505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="4554:4829" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="4651:4828" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="4916:6316" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="4921:5462" ph="&quot;&quot;&quot;Visualizes the object detection results using matplotlib....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="5609:6316" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="6349:6974" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="6354:6605" ph="&quot;&quot;&quot;Dumps the results of object detection into a json file....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="6655:6907" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="6676:6906" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="7002:7733" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="7007:7311" ph="&quot;&quot;&quot;Reads the json file containing the results of object detection and returns a dictionary of numpy arrays....&quot;&quot;&quot;" />
+                <marker date="1498472483300" expanded="true" signature="7461:7717" ph="..." />
+                <marker date="1498472483300" expanded="true" signature="7482:7716" ph="..." />
               </folding>
             </state>
           </provider>
@@ -29,8 +54,8 @@
       <file leaf-file-name="detect.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1374">
-              <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+            <state relative-caret-position="855">
+              <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -42,8 +67,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="18" column="79" lean-forward="false" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+              <first_editor relative-caret-position="190">
+                <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -96,7 +121,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -109,27 +134,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object-detection-api-wrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="object-detection-api-wrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/envs/tensorflow-gpu/python.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/crawler-on-tag-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -309,6 +317,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25349087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -363,11 +372,126 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1498472483300" expanded="true" signature="1192:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="1832:1929" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2070:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2256:2687" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2261:2528" ph="&quot;&quot;&quot;Converts json file of urls into a csv file with headers 'img_id' and 'url', respectively....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2717:3119" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2722:2908" ph="&quot;&quot;&quot;Reads the list of image urls and converts them to tensors....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2934:2968" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3161:3953" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3166:3637" ph="&quot;&quot;&quot;Removes any object detection results whose confidence (score) is below certain point specified by the user....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="3686:3937" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3749:3936" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3991:4845" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3996:4505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="4554:4829" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4651:4828" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4916:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4921:5462" ph="&quot;&quot;&quot;Visualizes the object detection results using matplotlib....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="5609:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6349:6974" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6354:6605" ph="&quot;&quot;&quot;Dumps the results of object detection into a json file....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="6655:6907" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6676:6906" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7002:7733" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7007:7311" ph="&quot;&quot;&quot;Reads the json file containing the results of object detection and returns a dictionary of numpy arrays....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="7461:7717" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7482:7716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="456">
+            <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1498472483300" expanded="true" signature="1192:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="1832:1929" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2070:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2256:2687" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2261:2528" ph="&quot;&quot;&quot;Converts json file of urls into a csv file with headers 'img_id' and 'url', respectively....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2717:3119" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2722:2908" ph="&quot;&quot;&quot;Reads the list of image urls and converts them to tensors....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2934:2968" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3161:3953" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3166:3637" ph="&quot;&quot;&quot;Removes any object detection results whose confidence (score) is below certain point specified by the user....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="3686:3937" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3749:3936" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3991:4845" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3996:4505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="4554:4829" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4651:4828" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4916:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4921:5462" ph="&quot;&quot;&quot;Visualizes the object detection results using matplotlib....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="5609:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6349:6974" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6354:6605" ph="&quot;&quot;&quot;Dumps the results of object detection into a json file....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="6655:6907" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6676:6906" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7002:7733" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7007:7311" ph="&quot;&quot;&quot;Reads the json file containing the results of object detection and returns a dictionary of numpy arrays....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="7461:7717" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7482:7716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="342">
+            <caret line="18" column="79" lean-forward="false" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -377,6 +501,33 @@
           <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <marker date="1498472483300" expanded="true" signature="1192:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="1832:1929" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2070:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2256:2687" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2261:2528" ph="&quot;&quot;&quot;Converts json file of urls into a csv file with headers 'img_id' and 'url', respectively....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2717:3119" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2722:2908" ph="&quot;&quot;&quot;Reads the list of image urls and converts them to tensors....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2934:2968" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3161:3953" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3166:3637" ph="&quot;&quot;&quot;Removes any object detection results whose confidence (score) is below certain point specified by the user....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="3686:3937" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3749:3936" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3991:4845" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3996:4505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="4554:4829" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4651:4828" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4916:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4921:5462" ph="&quot;&quot;&quot;Visualizes the object detection results using matplotlib....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="5609:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6349:6974" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6354:6605" ph="&quot;&quot;&quot;Dumps the results of object detection into a json file....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="6655:6907" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6676:6906" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7002:7733" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7007:7311" ph="&quot;&quot;&quot;Reads the json file containing the results of object detection and returns a dictionary of numpy arrays....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="7461:7717" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7482:7716" ph="..." />
           </folding>
         </state>
       </provider>
@@ -414,24 +565,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
+        <state relative-caret-position="1121">
           <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <marker date="1498472483300" expanded="true" signature="1192:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="1832:1929" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2070:2219" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2256:2687" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2261:2528" ph="&quot;&quot;&quot;Converts json file of urls into a csv file with headers 'img_id' and 'url', respectively....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2717:3119" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="2722:2908" ph="&quot;&quot;&quot;Reads the list of image urls and converts them to tensors....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="2934:2968" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3161:3953" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3166:3637" ph="&quot;&quot;&quot;Removes any object detection results whose confidence (score) is below certain point specified by the user....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="3686:3937" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3749:3936" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3991:4845" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="3996:4505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="4554:4829" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4651:4828" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4916:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="4921:5462" ph="&quot;&quot;&quot;Visualizes the object detection results using matplotlib....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="5609:6316" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6349:6974" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6354:6605" ph="&quot;&quot;&quot;Dumps the results of object detection into a json file....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="6655:6907" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="6676:6906" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7002:7733" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7007:7311" ph="&quot;&quot;&quot;Reads the json file containing the results of object detection and returns a dictionary of numpy arrays....&quot;&quot;&quot;" />
+            <marker date="1498472483300" expanded="true" signature="7461:7717" ph="..." />
+            <marker date="1498472483300" expanded="true" signature="7482:7716" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1374">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state relative-caret-position="855">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -441,8 +618,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="18" column="79" lean-forward="false" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+          <first_editor relative-caret-position="190">
+            <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
             <folding />
           </first_editor>
           <second_editor />

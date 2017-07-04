@@ -22,15 +22,17 @@ Simple wrapper functions for Google Object Detection API.
 
 *Example:* 
 
-<code>python detect_cm.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True</code>
+<code>python detect_cm.py --model-name faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017 --url-file Imagenet_sample_images --extension .json --downloaded True --do-rescale False</code>
 
 #### Required Arguments
 * <code>--model-name</code> : Name of the model to use. *No Default*
 * <code>--url-file</code> : Name of the url file without .json extension. *No Default*
 * <code>--extension</code> : Url file file type, .json or .csv. *Default: .csv*
 * <code>--downloaded</code> : Indicate whether you have already downloaded model .tar file or not. Wrapper will automatically create 'detection_model_zoo' directory and download model file if set to False. *Default: False*
+* <code>--do-rescale</code> : Indicate whether you want to rescale the images or not. *Default: False*
 
 #### Optional Arguments
+* <code>--width-threshold</code> : If rescale is set to True, all the images with width size over width threshold will be rescaled to fit width threshold. *Default: 500*
 * <code>--json-output-file</code> : Name of the json output file to dump results. *Default: output.json*
 * <code>--n-threads</code> : Number of threads to use. *Default: 64*
 * <code>--visualize</code> : Indicate whether you want to visualize the results. *Default: False*
@@ -56,9 +58,11 @@ model_name = 'faster_rcnn_inception_resnet_v2_atrous_coco_11_06_2017'
 url_file = 'Imagenet_sample_images'
 extension = '.csv'
 downloaded = True
+do_rescale = True
+width_threshold = 1000
 visualize = True
 
-res = detect.object_detect(model_name=model_name, url_file=url_file, extension=extension, downloaded=downloaded, visualize=visualize)
+res = detect.object_detect(model_name=model_name, url_file=url_file, extension=extension, downloaded=downloaded, do_rescale=do_rescale, width_threshold=width_thresholdm visualize=visualize)
 </code></pre>
 
 ## Etc.
